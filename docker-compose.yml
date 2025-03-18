@@ -1,0 +1,9 @@
+services:
+  mongodb:
+    container_name: mongodb-scheduler
+    image: mongodb/mongodb-community-server:7.0.16-ubuntu2204
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myuser
+      MONGO_INITDB_ROOT_PASSWORD: mypassword
