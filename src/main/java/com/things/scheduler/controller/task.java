@@ -29,6 +29,14 @@ public class task {
         );
     }
 
+    @GetMapping
+    public ResponseEntity<Page<TaskResponse>> getTasksByEmail(
+            @RequestHeader("Authorization") String token,
+            Pageable pageable
+    ){
+        return ResponseEntity.ok(findTask.findAllTaskByEmail(token, pageable));
+    }
+
     @GetMapping("/events")
     public ResponseEntity<Page<TaskResponse>> getEvents(@RequestParam LocalDateTime start,
                                                               @RequestParam LocalDateTime end,
@@ -39,4 +47,5 @@ public class task {
                 findTask.findAllByDateExecutedBetween(start, end, pageable)
         );
     }
+
 }

@@ -15,5 +15,5 @@ public interface TaskRepository  extends MongoRepository<TaskEntity,String> {
 
     List<TaskEntity> findByStatus(StatusNotification status);
     Page<TaskEntity> findAllByDateExecutedBetween(LocalDateTime start, LocalDateTime end, Pageable pageable);
-    List<TaskEntity> findByEmail(String email);
+    Page<TaskEntity> findTaskEntitiesByEmail(String email, Pageable pageable);
 }

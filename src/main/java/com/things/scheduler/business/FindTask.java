@@ -6,6 +6,7 @@ import com.things.scheduler.infrastructure.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
@@ -22,5 +23,11 @@ public class FindTask {
         return taskMapper.taskEntityToResponsePage(
                 taskRepository.findAllByDateExecutedBetween(start, end, pageable)
         );
+    }
+
+    public Page<TaskResponse> findAllTaskByEmail(String token, Pageable pageable) {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        var result = taskRepository.findTaskEntitiesByEmail(email, pageable);
+        return taskMapper.taskEntityToResponsePage(result);
     }
 }
