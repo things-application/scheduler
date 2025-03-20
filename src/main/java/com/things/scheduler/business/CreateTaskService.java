@@ -20,7 +20,7 @@ public class CreateTaskService {
     private final TaskMapper taskMapper;
     private final JwtUtil jwtUtil;
 
-    public TaskResponse execute(String token, TaskRequest  taskRequest) {
+    public TaskResponse create(String token, TaskRequest  taskRequest) {
 
         String email = jwtUtil.extrairEmailToken(token.substring(7));
 

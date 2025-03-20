@@ -20,7 +20,7 @@ public class BulkTaskInsertion {
     };
 
     public static void main(String[] args) {
-        String url = "http://localhost:8081/task";
+        String url = "http://localhost:8081/tasks";
         String token = "";
         Random random = new Random();
 
