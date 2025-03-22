@@ -1,4 +1,4 @@
-package com.things.scheduler.infrastructure.enums;
+package com.things.scheduler.domain.enums;
 
 public enum StatusNotification {
 

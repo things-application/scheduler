@@ -1,7 +1,7 @@
 package com.things.scheduler.infrastructure.repository;
 
-import com.things.scheduler.infrastructure.entity.TaskEntity;
-import com.things.scheduler.infrastructure.enums.StatusNotification;
+import com.things.scheduler.domain.entity.TaskEntity;
+import com.things.scheduler.domain.enums.StatusNotification;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;

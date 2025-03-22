@@ -1,8 +1,8 @@
 package com.things.scheduler.controller;
 
 
-import com.things.scheduler.business.CreateTaskService;
-import com.things.scheduler.business.FindTask;
+import com.things.scheduler.business.usecases.CreateTaskService;
+import com.things.scheduler.business.usecases.FindTask;
 import com.things.scheduler.business.dto.TaskRequest;
 import com.things.scheduler.business.dto.TaskResponse;
 import lombok.RequiredArgsConstructor;

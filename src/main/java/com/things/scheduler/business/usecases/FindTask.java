@@ -1,4 +1,4 @@
-package com.things.scheduler.business;
+package com.things.scheduler.business.usecases;
 
 import com.things.scheduler.business.dto.TaskResponse;
 import com.things.scheduler.business.mapper.TaskMapper;
