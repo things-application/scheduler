@@ -48,6 +48,16 @@ public class ApplicationResourceAdvice {
         );
     }
 
+    @ExceptionHandler(ResourceNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ApiError handleResourceNotFoundException(ResourceNotFoundException cause) {
+        return new ApiError(
+                cause.getClass().getSimpleName(),
+                cause.getMessage(),
+                HttpStatus.NOT_FOUND.value()
+        );
+    }
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ApiError handleRuntimeException(RuntimeException cause) {
