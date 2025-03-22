@@ -1,6 +1,6 @@
-package com.things.scheduler.infrastructure.entity;
+package com.things.scheduler.domain.entity;
 
-import com.things.scheduler.infrastructure.enums.StatusNotification;
+import com.things.scheduler.domain.enums.StatusNotification;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

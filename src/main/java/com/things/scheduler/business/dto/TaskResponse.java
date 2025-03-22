@@ -1,7 +1,7 @@
 package com.things.scheduler.business.dto;
 
 
-import com.things.scheduler.infrastructure.enums.StatusNotification;
+import com.things.scheduler.domain.enums.StatusNotification;
 import lombok.*;
 
 import java.time.LocalDateTime;
